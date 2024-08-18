@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Page Title] - [Your Name]</title>
+    <title>CV - Anastasiia Arbuzova</title>
     <!-- Link to Google Fonts to include Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -13,14 +13,14 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #FDFDFD;
+            color: #000014;
         }
 
         header {
-            background-color: #0073e6;
-            color: #fff;
-            padding: 20px;
+            background-color: #002C58;
+            color: #FDFDFD;
+            padding: 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -37,7 +37,7 @@
         }
 
         nav a {
-            color: #fff;
+            color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
         }
@@ -45,15 +45,41 @@
         section {
             padding: 20px;
             margin: 20px;
-            background: #fff;
+            background: #F3F3F3;
             border-radius: 8px;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
+        .embed-container {
             text-align: center;
-            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .embed-container embed {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #EAEAEA;
+            border-radius: 8px;
+        }
+
+        .download-link {
+            margin-top: 15px;
+            display: inline-block;
+            background-color: #0043F1;
+            color: #FDFDFD;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .download-link:hover {
+            background-color: #002C58;
+        }
+
+        footer {
+            background-color: #EAEAEA;
+            color: #000014;
+            text-align: center;
+            padding: 5px;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -64,7 +90,7 @@
 <body>
 
     <header>
-        <h1><a href="index.html" style="color: #fff; text-decoration: none;">[Your Name]</a></h1>
+        <h1><a href="index.html" style="color: #FDFDFD; text-decoration: none;">Anastasiia Arbuzova</a></h1>
         <nav>
             <a href="cv.html">CV</a>
             <a href="research.html">Research</a>
@@ -74,31 +100,18 @@
 
     <section>
         <h2>Curriculum Vitae</h2>
-        <p>Download my CV: <a href="[path/to/your/cv.pdf]" target="_blank">[Your Name] - CV</a></p>
-        <p>You can also find a brief overview of my academic and professional background below.</p>
-        <h3>Education</h3>
-        <ul>
-            <li>[Degree 1, University Name, Year]</li>
-            <li>[Degree 2, University Name, Year]</li>
-        </ul>
-        <h3>Experience</h3>
-        <ul>
-            <li>[Position 1, Organization Name, Year]</li>
-            <li>[Position 2, Organization Name, Year]</li>
-        </ul>
-        <h3>Skills</h3>
-        <ul>
-            <li>[Skill 1]</li>
-            <li>[Skill 2]</li>
-            <li>[Skill 3]</li>
-        </ul>
+        <p>You can preview my CV below or download it using the link</p>
+
+        <div class="embed-container">
+            <embed src="CV_Arbuzova.pdf" type="application/pdf">
+            <a class="download-link" href="CV_Arbuzova.pdf" download>Download CV</a>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; [Your Name], [Current Year]. All rights reserved.</p>
+        <p>&copy; Anastasiia Arbuzova, 2024. All rights reserved.</p>
     </footer>
 
 </body>
 
 </html>
-
