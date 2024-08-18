@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Name] - PhD Candidate</title>
+    <title>Anastasiia Arbuzova - PhD Candidate</title>
     <!-- Link to Google Fonts to include Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -21,20 +21,25 @@
             background-color: #0073e6;
             color: #fff;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        nav {
-            background: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
         }
 
         nav a {
             color: #fff;
-            margin: 0 15px;
             text-decoration: none;
+            font-weight: 700;
         }
 
         section {
@@ -51,10 +56,10 @@
         }
 
         .bio img {
-            max-width: 150px;
-            height: auto; /* Ensures the image maintains its aspect ratio */
+            max-width: 250px;
+            height: auto;
             margin-right: 20px;
-            border-radius: 8px; /* Adds slight rounding to the corners */
+            border-radius: 8px;
         }
 
         footer {
@@ -72,18 +77,17 @@
 <body>
 
     <header>
-        <h1>Anastasiia Arbuzova</h1>
+        <h1><a href="index.html" style="color: #fff; text-decoration: none;">Anastasiia Arbuzova</a></h1>
+        <nav>
+            <a href="cv.html">CV</a>
+            <a href="research.html">Research</a>
+            <a href="teaching.html">Teaching</a>
+        </nav>
     </header>
-
-    <nav>
-        <a href="cv.html">CV</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
-    </nav>
-
+    
     <section>
         <div class="bio">
-            <img src="Foto-132.jpg" alt="Photo of [Your Name]">
+            <img src="Foto-132.jpg" alt="Photo">
             <p>
                 Welcome to my personal website! I am a PhD candidate in Economics at Boston University. My research focuses on [briefly describe your research area].
                 I am passionate about [mention any related areas or special interests]. Explore the links above to learn more about my research and teaching activities.
