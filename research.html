@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Page Title] - [Your Name]</title>
+    <title>Research - [Your Name]</title>
     <!-- Link to Google Fonts to include Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -13,17 +13,20 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #FDFDFD;
+            color: #000014;
         }
 
         header {
-            background-color: #0073e6;
-            color: #fff;
-            padding: 20px;
+            background-color: #002C58;
+            color: #FDFDFD;
+            padding: 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-image: url('[path/to/your/header-photo.jpg]');
+            background-size: cover;
+            background-position: center;
         }
 
         header h1 {
@@ -37,7 +40,7 @@
         }
 
         nav a {
-            color: #fff;
+            color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
         }
@@ -45,26 +48,50 @@
         section {
             padding: 20px;
             margin: 20px;
-            background: #fff;
+            background: #F3F3F3;
             border-radius: 8px;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
+        .working-papers h3 {
+            cursor: pointer;
+            color: #0043F1;
+            text-decoration: underline;
+        }
+
+        .abstract {
+            display: none;
+            margin-top: 10px;
+            background-color: #EAEAEA;
             padding: 10px;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: #EAEAEA;
+            color: #000014;
+            text-align: center;
+            padding: 5px;
             position: fixed;
             width: 100%;
             bottom: 0;
         }
     </style>
+    <script>
+        function toggleAbstract(id) {
+            var abstract = document.getElementById(id);
+            if (abstract.style.display === "none") {
+                abstract.style.display = "block";
+            } else {
+                abstract.style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
 
     <header>
-        <h1><a href="index.html" style="color: #fff; text-decoration: none;">[Your Name]</a></h1>
+        <h1><a href="index.html" style="color: #FDFDFD; text-decoration: none;">Anastasiia Arbuzova</a></h1>
         <nav>
             <a href="cv.html">CV</a>
             <a href="research.html">Research</a>
@@ -73,22 +100,23 @@
     </header>
 
     <section>
-        <h2>Research Interests</h2>
-        <p>
-            My research interests include [Research Interest 1], [Research Interest 2], and [Research Interest 3].
-            I focus on [briefly describe your specific research focus or projects].
-        </p>
-        <h3>Publications</h3>
-        <ul>
-            <li>[Publication 1: Title, Journal, Year]</li>
-            <li>[Publication 2: Title, Journal, Year]</li>
-            <li>[Publication 3: Title, Journal, Year]</li>
-        </ul>
-        <h3>Conferences & Presentations</h3>
-        <ul>
-            <li>[Conference 1: Title, Year]</li>
-            <li>[Conference 2: Title, Year]</li>
-        </ul>
+        <h3>Working Papers</h3>
+        <div class="working-papers">
+            <h3 onclick="toggleAbstract('abstract1')">Paper Title 1</h3>
+            <div id="abstract1" class="abstract">
+                <p>Abstract: This paper explores...</p>
+            </div>
+
+            <h3 onclick="toggleAbstract('abstract2')">Paper Title 2</h3>
+            <div id="abstract2" class="abstract">
+                <p>Abstract: This study examines...</p>
+            </div>
+
+            <h3 onclick="toggleAbstract('abstract3')">Paper Title 3</h3>
+            <div id="abstract3" class="abstract">
+                <p>Abstract: In this paper, we analyze...</p>
+            </div>
+        </div>
     </section>
 
     <footer>
