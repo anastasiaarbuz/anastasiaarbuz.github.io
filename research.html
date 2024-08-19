@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - Anastasiia Arbuzova</title>
     <!-- Link to Google Fonts to include Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -44,7 +44,8 @@
 
         header nav a:hover,
         .abstract-preview:hover,
-        .media-links:hover {
+        .media-links:hover,
+        .working-papers a:hover {
             text-decoration: underline;
         }
 
@@ -55,11 +56,10 @@
             border-radius: 8px;
         }
 
-        .working-papers h3 {
-            color: #000014; /* Set title color to black */
-            font-weight: normal;
-            margin-bottom: 5px;
-            cursor: pointer;
+        .working-papers h3 a {
+            color: #80A1F8; /* Light blue color for paper titles */
+            font-weight: bold; /* Bold font for paper titles */
+            text-decoration: none;
         }
 
         .abstract-preview {
@@ -118,14 +118,19 @@
     <section>
         <h2>Working Papers</h2>
         <div class="working-papers">
-            <h3>Fraud and Legitimacy: The Economics of Autocratic Elections. <em>(Job Market Paper)</em></h3>
-            <span class="abstract-preview" id="abstract1-preview" onclick="toggleAbstract('abstract1')">Abstract: Why do autocracies employ seemingly excessive fraud when victory is virtually guaranteed?..</span>
+            <h3>
+                <a href="link_to_paper_1.pdf" target="_blank">Fraud and Legitimacy: The Economics of Autocratic Elections. <em>(Job Market Paper)</em></a>
+            </h3>
+            <span class="abstract-preview" id="abstract1-preview" onclick="toggleAbstract('abstract1')">Abstract: Why do autocracies...</span>
             <span class="abstract-full" id="abstract1-full">
                 <span onclick="toggleAbstract('abstract1')">Abstract: Why do autocracies employ seemingly excessive fraud when victory is virtually guaranteed? This paper provides evidence that electoral manipulation can be used to improve an incumbent's perceived legitimacy, particularly when it is damaged by unrest or unpopular policies. Using data from Russian legislative elections, I confirm the presence of electoral manipulations using the excess integer values method. To rationalize an autocrat’s decision to engage in manipulations beyond winning an election, I hypothesize that he is concerned about legitimacy. Evidence for this hypothesis is given in two steps. First, employing an instrumental variable strategy, I demonstrate that localities experiencing higher levels of protests exhibit increased electoral fraud in subsequent legislative elections. Second, through a survey experiment with a representative sample of the Russian population, I illustrate that these manipulations can be used to influence voters' perceptions of government legitimacy: information about high (low) turnout value increases (decreases) trust in the government.</span>
             </span>
 
-            <h3>Gendered Differences in Mobility and the Demand for Transport in Ethiopia, with Tigabu Getahun, Ammar A. Malik and Mahesh Karra. Media coverage: <a href="https://www.theigc.org/publications/gendered-differences-mobility-and-demand-transport-ethiopia" target="_blank" class="media-links">IGC Policy Brief</a></h3>
-            <span class="abstract-preview" id="abstract2-preview" onclick="toggleAbstract('abstract2')">Abstract: We assess the extent to which travel demand varies by gender...</span>
+            <h3>
+                <a href="link_to_paper_2.pdf" target="_blank">Gendered Differences in Mobility and the Demand for Transport in Ethiopia, with Tigabu Getahun, Ammar A. Malik and Mahesh Karra.</a>
+            </h3>
+            Media coverage: <a href="https://www.theigc.org/publications/gendered-differences-mobility-and-demand-transport-ethiopia" target="_blank" class="media-links">IGC Policy Brief</a>
+            <span class="abstract-preview" id="abstract2-preview" onclick="toggleAbstract('abstract2')">Abstract: We assess the extent...</span>
             <span class="abstract-full" id="abstract2-full">
                 <span onclick="toggleAbstract('abstract2')">Abstract: We assess the extent to which travel demand varies by gender, particularly for women, with the introduction of high-quality transport in urban Ethiopia. A total of over 1,000 married couples in Addis Ababa were offered an allowance for on-demand, private taxi services over a two-month period. The allowance recipient was randomized to be either the woman, the man, or the couple jointly. Additionally, the total allowance amount was randomized between Low (ETB 1540) and High (ETB 4100). We document significant baseline gender differences in mobility, with 80 percent of men traveling daily or almost every day compared to less than 40 percent of women. As a result of the intervention, we find no significant differences in taxi service utilization measured by allowance take-up, total trips made, the proportion of credit spent, and the average trip cost between the Woman and Man arms, suggesting that the improved transport option may have contributed to closing the gender gap in physical mobility.</span>
             </span>
@@ -135,10 +140,12 @@
     <section>
         <h2>Work in Progress</h2>
         <div class="working-papers">
-            <h3>Social Networks and Solving Collective Action Problem.</h3>
-            <span class="abstract-preview" id="abstract3-preview" onclick="toggleAbstract('abstract3')">Abstract: How can a long-ruling incumbent party be successfully overthrown?..</span>
+            <h3>
+                <a href="link_to_paper_3.pdf" target="_blank">Social Networks and Solving Collective Action Problem.</a>
+            </h3>
+            <span class="abstract-preview" id="abstract3-preview" onclick="toggleAbstract('abstract3')">Abstract: How can a long-ruling...</span>
             <span class="abstract-full" id="abstract3-full">
-                <span onclick="toggleAbstract('abstract3')">Abstract: How can a long-ruling incumbent party be successfully overthrown? This paper explores whether social connectedness, opposition penetration, and a unified voting strategy of opposition can help overcome the collective action problem, using the 2021 Russian legislative elections as a case study. I utilize Vkontakte, Russia's most popular social media platform, to construct a social network and a map of self-registered opposition supporters. By analyzing election results at the precinct level, I show that the suggested voting strategy decreased incumbent vote shares in areas with higher social connectedness and stronger opposition presence.</span>
+                <span onclick="toggleAbstract('abstract3')">Abstract: How can a long-ruling party be successfully overthrown? This paper explores whether social connectedness, opposition penetration, and a unified voting strategy of opposition can help overcome the collective action problem, using the 2021 Russian legislative elections as a case study. I utilize Vkontakte, Russia's most popular social media platform, to construct a social network and a map of self-registered opposition supporters. By analyzing election results at the precinct level, I show that the suggested voting strategy decreased incumbent vote shares in areas with higher social connectedness and stronger opposition presence.</span>
             </span>
         </div>
     </section>
