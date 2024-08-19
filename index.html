@@ -5,49 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #FDFDFD;
+            color: #000014;
         }
         header {
-            background-color: #002C58; /* Adjust color as needed */
-            color: #FDFDFD; /* Text color */
-            padding: 10px 20px;
-            text-align: center;
+            background-color: #002C58;
+            color: #FDFDFD;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-image: url('[path/to/your/header-photo.jpg]');
+            background-size: cover;
+            background-position: center;
         }
-        nav {
-            background-color: #0043F1; /* Adjust color as needed */
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+        header h1 {
             margin: 0;
+            font-size: 24px;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
+        header nav {
+            display: flex;
+            gap: 15px;
         }
-        nav ul li a {
-            color: #FDFDFD; /* Link color */
+        nav a {
+            color: #FDFDFD;
             text-decoration: none;
+            font-weight: 700;
         }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        .bio {
-            text-align: center;
-            margin-bottom: 60px; /* Space for the footer */
+        section {
             padding: 20px;
+            margin: 20px;
+            background: #F3F3F3;
+            border-radius: 8px;
         }
-        .bio img {
-            width: 150px; /* Adjust the width as needed */
-            height: auto;
-            border-radius: 50%; /* Optional: makes the photo circular */
-        }
-        .contact-info {
-            margin-top: 20px; /* Space between main text and contact info */
+        footer {
+            background-color: #EAEAEA;
+            color: #000014;
+            text-align: center;
+            padding: 5px;
+            font-size: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            border-top: 1px solid #CCC; /* Optional: adds a subtle border at the top of the footer */
         }
         .contact-info p {
             margin: 10px 0; /* Space between contact details */
@@ -62,40 +66,21 @@
             vertical-align: middle; /* Align icon with text */
             margin-right: 8px; /* Space between icon and text */
         }
-        footer {
-            background-color: #002C58; /* Adjust color as needed */
-            color: #FDFDFD; /* Text color */
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .footer-content a {
-            color: #80A1F8; /* Link color */
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .footer-content a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
     <header>
         <h1>Anastasiia Arbuzova</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#teaching">Teaching</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <section>
         <div class="bio">
-            <img src="files/Foto-132.jpg" alt="Photo">
+            <img src="files/Foto-132.jpg" alt="Photo" style="width: 250px; height: auto; border-radius: 8px;">
             <p>
                 Welcome to my personal page! I am a PhD candidate in Economics at Boston University. My research spans the fields of political economy and development economics. My job market paper investigates legitimacy concerns as a driver of electoral fraud in autocracies. Additionally, I am working on projects examining gendered demand for transportation in urban Ethiopia and using social network analysis to evaluate strategic voting in addressing collective action problems. My research employs quasi-experimental methods and includes designing and implementing randomized controlled trials.
             </p>
@@ -112,12 +97,12 @@
                     Email: <a href="mailto:your.email@example.com">your.email@example.com</a>
                 </p>
                 <p>
-                    <a href="https://www.linkedin.com/in/anastasia-arbuzova-yu/" target="_blank">
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
                         <img src="path/to/linkedin-icon.png" alt="LinkedIn"> LinkedIn
                     </a>
                 </p>
                 <p>
-                    <a href="https://github.com/anastasiaarbuz" target="_blank">
+                    <a href="https://github.com/yourusername" target="_blank">
                         <img src="path/to/github-icon.png" alt="GitHub"> GitHub
                     </a>
                 </p>
@@ -127,6 +112,10 @@
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Anastasiia Arbuzova. All rights reserved.</p>
+            <p>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            </p>
         </div>
     </footer>
 </body>
