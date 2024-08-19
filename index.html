@@ -19,9 +19,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-image: url('[path/to/your/header-photo.jpg]');
-            background-size: cover;
-            background-position: center;
         }
         header h1 {
             margin: 0;
@@ -36,22 +33,30 @@
             text-decoration: none;
             font-weight: 700;
         }
-        section {
+        .container {
+            display: grid;
+            grid-template-columns: 250px 1fr; /* Two columns: left fixed, right flexible */
+            gap: 20px;
             padding: 20px;
-            margin: 20px;
-            background: #F3F3F3;
-            border-radius: 8px;
+        }
+        .left-column {
             display: flex;
-            align-items: flex-start; /* Aligns text to the top of the image */
+            flex-direction: column;
+            align-items: center;
+            background-color: #F3F3F3;
+            padding: 20px;
+            border-radius: 8px;
         }
-        .bio img {
-            width: 200px;
+        .left-column img {
+            width: 250px;
             height: auto;
-            border-radius: 8px; /* Optional: makes the photo slightly rounded */
-            margin-right: 20px; /* Space between the image and the text */
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
-        .bio-content {
-            flex: 1; /* Takes up the remaining space next to the image */
+        .right-column {
+            background-color: #F3F3F3;
+            padding: 20px;
+            border-radius: 8px;
         }
         footer {
             background-color: #EAEAEA;
@@ -62,68 +67,72 @@
             position: fixed;
             width: 100%;
             bottom: 0;
-            border-top: 1px solid #CCC; /* Optional: adds a subtle border at the top of the footer */
+            border-top: 1px solid #CCC;
         }
         .contact-info p {
-            margin: 10px 0; /* Space between contact details */
+            margin: 10px 0;
         }
         .contact-info a {
-            text-decoration: none; /* Remove underline from links */
-            color: inherit; /* Use default text color */
+            text-decoration: none;
+            color: inherit;
         }
         .contact-info img {
             width: 24px;
             height: 24px;
-            vertical-align: middle; /* Align icon with text */
-            margin-right: 8px; /* Space between icon and text */
+            vertical-align: middle;
+            margin-right: 8px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1><a href="index.html" style="color: #FDFDFD; text-decoration: none;">Anastasiia Arbuzova</a></h1>
+        <h1>Anastasiia Arbuzova</h1>
         <nav>
-            <a href="cv.html">CV</a>
-            <a href="research.html">Research</a>
-            <a href="teaching.html">Teaching</a>
+            <a href="#cv">CV</a>
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
         </nav>
     </header>
-    <section id="home">
-        <div class="bio">
+    <div class="container">
+        <div class="left-column">
             <img src="files/Foto-132.jpg" alt="Photo">
-            <div class="bio-content">
+            <div class="contact-info">
                 <p>
-                    Welcome to my personal page! I am a PhD candidate in Economics at Boston University. My research spans the fields of political economy and development economics. My job market paper studies legitimacy concerns as a driver of electoral fraud in autocracies. My other projects include a study on gendered demand for transportation in urban Ethiopia, and social network analysis to estimate the effectiveness of strategic voting in solving the collective action problem. In my work, I use quasi-experimental methods and have experience designing and implementing randomized controlled trials.
+                    <strong>Contact:</strong><br>
+                    Email: <a href="mailto:arbuzova@bu.edu">arbuzova@bu.edu</a>
                 </p>
                 <p>
-                    I will be giving talks in Fall 2024 at:
-                    <ul>
-                        <li>IPSA 75th Anniversary Conference, Lisbon</li>
-                    </ul>
-                    Please reach out if you would like to connect during these events!
+                    <a href="https://www.linkedin.com/in/anastasia-arbuzova-yu/" target="_blank">
+                        <img src="files/LI-In-Bug.png" alt="LinkedIn"> LinkedIn
+                    </a>
                 </p>
-                <div class="contact-info">
-                    <p>
-                        <strong>Contact Information:</strong><br>
-                        Email: <a href="mailto:arbuzova@bu.edu">arbuzova@bu.edu</a>
-                    </p>
-                    <p>
-                        <a href="https://www.linkedin.com/in/anastasia-arbuzova-yu/" target="_blank">
-                            <img src="files/LI-In-Bug.png" alt="LinkedIn"> LinkedIn
-                        </a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/anastasiaarbuz" target="_blank">
-                            <img src="files/github-mark.png" alt="GitHub"> GitHub
-                        </a>
-                    </p>
-                </div>
+                <p>
+                    <a href="https://github.com/anastasiaarbuz" target="_blank">
+                        <img src="files/github-mark.png" alt="GitHub"> GitHub
+                    </a>
+                </p>
             </div>
         </div>
-    </section>
+        <div class="right-column">
+            <p>
+                Welcome to my personal page! I am a PhD candidate in Economics at Boston University. My research spans the fields of political economy and development economics. My job market paper investigates legitimacy concerns as a driver of electoral fraud in autocracies. Additionally, I am working on projects examining gendered demand for transportation in urban Ethiopia and using social network analysis to evaluate strategic voting in addressing collective action problems. My research employs quasi-experimental methods and includes designing and implementing randomized controlled trials.
+            </p>
+            <p>
+                I will be giving talks in Fall 2024 at:
+                <ul>
+                    <li>IPSA 75th Anniversary Conference, Lisbon</li>
+                </ul>
+                Please reach out if you would like to connect during these events!
+            </p>
+        </div>
+    </div>
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Anastasiia Arbuzova. All rights reserved.</p>
+            <p>&copy; Anastasiia Arbuzova, 2024. All rights reserved.</p>
+            <p>
+                <a href="https://www.linkedin.com/in/anastasia-arbuzova-yu/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/anastasiaarbuz" target="_blank">GitHub</a>
+            </p>
         </div>
     </footer>
 </body>
