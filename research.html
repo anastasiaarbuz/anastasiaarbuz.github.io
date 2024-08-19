@@ -54,8 +54,12 @@
 
         .working-papers h3 {
             cursor: pointer;
-            color: #0043F1;
-            text-decoration: underline;
+            color: #80A1F8;
+            text-decoration: none; /* Removes underline */
+        }
+
+        .working-papers h3:hover {
+            text-decoration: underline; /* Optional: Adds underline on hover */
         }
 
         .abstract {
@@ -70,7 +74,7 @@
             background-color: #EAEAEA;
             color: #000014;
             text-align: center;
-            padding: 5px;
+            padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -79,10 +83,10 @@
     <script>
         function toggleAbstract(id) {
             var abstract = document.getElementById(id);
-            if (abstract.style.display === "none") {
-                abstract.style.display = "block";
-            } else {
+            if (abstract.style.display === "block") {
                 abstract.style.display = "none";
+            } else {
+                abstract.style.display = "block";
             }
         }
     </script>
@@ -100,7 +104,7 @@
     </header>
 
     <section>
-        <h3>Working Papers</h3>
+        <h2>Working Papers</h2>
         <div class="working-papers">
             <h3 onclick="toggleAbstract('abstract1')">Paper Title 1</h3>
             <div id="abstract1" class="abstract">
@@ -120,7 +124,7 @@
     </section>
 
     <footer>
-        <p>&copy; [Your Name], [Current Year]. All rights reserved.</p>
+        <p>&copy; Anastasiia Arbuzova, 2024. All rights reserved.</p>
     </footer>
 
 </body>
