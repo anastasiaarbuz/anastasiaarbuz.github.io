@@ -49,29 +49,27 @@
             border-radius: 8px;
         }
 
+        .working-papers {
+            position: relative;
+        }
+
         .working-papers h3 {
-            cursor: pointer;
             color: #000014; /* Set title color to black */
             font-weight: normal;
-            text-decoration: none; /* Removes underline */
             margin-bottom: 5px;
-            position: relative;
+            cursor: pointer;
         }
 
         .abstract {
             display: none;
-            margin-top: 10px;
             background-color: #EAEAEA;
             padding: 10px;
             border-radius: 4px;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            z-index: 10;
-            width: 100%;
+            margin-top: 5px;
         }
 
-        .working-papers h3:hover + .abstract {
+        .working-papers h3:hover + .abstract,
+        .abstract:hover {
             display: block;
         }
 
