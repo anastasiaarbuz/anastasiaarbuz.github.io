@@ -17,29 +17,32 @@
             color: #000014;
         }
 
-        header {
-            background-color: #002C58;
-            color: #FDFDFD;
-            padding: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
         header h1 {
             margin: 0;
             font-size: 24px;
         }
 
-        header nav {
-            display: flex;
-            gap: 15px;
+        header h1 a {
+            color: #FDFDFD;
+            text-decoration: none;
         }
 
-        nav a {
+        header nav {
+            display: flex;
+            gap: 30px; /* Increase the gap between navigation items */
+        }
+
+        header nav a {
             color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
+        }
+
+        header nav a:hover,
+        .abstract-preview:hover,
+        .media-links:hover,
+        .working-papers a:hover {
+            text-decoration: underline;
         }
 
         section {
