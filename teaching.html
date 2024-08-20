@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - Anastasiia Arbuzova</title>
     <!-- Link to Google Fonts to include Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body   {
+        body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -20,13 +19,13 @@
         header {
             background-color: #002C58; /* Original background color */
             color: #FDFDFD;
-            height: 200px; /* Fixed height for consistent appearance */
-            padding: 0 40px; /* Adjusted padding to avoid increasing height */
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: relative; /* Needed for layering */
             overflow: hidden; /* Ensures content stays within header */
+            height: 200px; /* Consistent height */
         }
 
         header::before {
@@ -39,19 +38,21 @@
             background-image: url('files/board.png');
             background-size: cover;
             background-position: center;
-            opacity: 0.4;
+            opacity: 0.2;
             z-index: 1;
         }
 
         header h1,
         header nav {
             position: relative;
-            z-index: 2;
+            z-index: 2; /* Ensure text is above the background image */
         }
 
         header h1 a {
             color: #FDFDFD;
             text-decoration: none;
+            position: relative;
+            z-index: 3; /* Ensure the link is clickable above everything */
         }
 
         header nav {
@@ -63,6 +64,8 @@
             color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
+            position: relative;
+            z-index: 3; /* Ensure navigation links are clickable */
         }
 
         header nav a:hover,
