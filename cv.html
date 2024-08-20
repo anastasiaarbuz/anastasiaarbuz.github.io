@@ -31,15 +31,27 @@
             font-size: 24px;
         }
 
-        header nav {
-            display: flex;
-            gap: 15px;
+        header h1 a {
+            color: #FDFDFD;
+            text-decoration: none;
         }
 
-        nav a {
+        header nav {
+            display: flex;
+            gap: 30px; /* Increase the gap between navigation items */
+        }
+
+        header nav a {
             color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
+        }
+
+        header nav a:hover,
+        .abstract-preview:hover,
+        .media-links:hover,
+        .working-papers a:hover {
+            text-decoration: underline;
         }
 
         section {
@@ -80,17 +92,17 @@
             color: #000014;
             text-align: center;
             padding: 5px;
+            font-size: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
+            border-top: 1px solid #CCC;
         }
     </style>
 </head>
-
 <body>
-
     <header>
-        <h1><a href="index.html" style="color: #FDFDFD; text-decoration: none;">Anastasiia Arbuzova</a></h1>
+        <h1>Anastasiia Arbuzova</h1>
         <nav>
             <a href="cv.html">CV</a>
             <a href="research.html">Research</a>
