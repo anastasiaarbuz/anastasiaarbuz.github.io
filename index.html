@@ -17,33 +17,55 @@
         }
 
         header {
-            background-color: #002C58;
+            background-color: #002C58; /* Original background color */
             color: #FDFDFD;
-            padding: 40px;
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative; /* Needed for layering */
+            overflow: hidden; /* Ensures content stays within header */
+            height: 200px; /* Consistent height */
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 24px;
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('files/mini-bus.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        header h1,
+        header nav {
+            position: relative;
+            z-index: 2; /* Ensure text is above the background image */
         }
 
         header h1 a {
             color: #FDFDFD;
             text-decoration: none;
+            position: relative;
+            z-index: 3; /* Ensure the link is clickable above everything */
         }
 
         header nav {
             display: flex;
-            gap: 30px; /* Increase the gap between navigation items */
+            gap: 30px;
         }
 
         header nav a {
             color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
+            position: relative;
+            z-index: 3; /* Ensure navigation links are clickable */
         }
 
         header nav a:hover,
@@ -52,7 +74,7 @@
         .working-papers a:hover {
             text-decoration: underline;
         }
-        
+
         .container {
             display: grid;
             grid-template-columns: 250px 1fr;
@@ -60,6 +82,7 @@
             padding: 20px;
             align-items: start;
         }
+        
         .left-column {
             display: flex;
             flex-direction: column;
@@ -68,32 +91,38 @@
             padding: 0;
             border-radius: 8px;
         }
+
         .left-column img {
             width: 250px;
             height: auto;
             border-radius: 8px;
             margin-bottom: 20px;
         }
+
         .contact-info {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 10px;
         }
+
         .contact-info a {
             text-decoration: none;
             color: inherit;
         }
+
         .contact-info img {
             width: 24px;
             height: 24px;
             vertical-align: left;
         }
+
         .right-column {
             background-color: #F3F3F3;
             padding: 20px;
             border-radius: 8px;
         }
+
         footer {
             background-color: #EAEAEA;
             color: #000014;
@@ -109,7 +138,7 @@
 </head>
 <body>
     <header>
-        <h1>Anastasiia Arbuzova</h1>
+        <h1><a href="index.html">Anastasiia Arbuzova</a></h1>
         <nav>
             <a href="cv.html">CV</a>
             <a href="research.html">Research</a>
@@ -119,24 +148,23 @@
     <div class="container">
         <div class="left-column">
             <img src="files/Foto-132.jpg" alt="Photo">
-        <div class="contact-info">
-            <p>
-                <strong>Contact:</strong><br>
-                Email: <a href="mailto:arbuzova@bu.edu">arbuzova@bu.edu</a>
-            </p>
-            <p style="display: flex; gap: 10px; justify-content: center;">
-                <a href="https://github.com/anastasiaarbuz" target="_blank">
-                    <img src="files/github-mark.png" alt="GitHub" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://www.linkedin.com/in/anastasia-arbuzova-yu/" target="_blank">
-                    <img src="files/LI-In-Bug.png" alt="LinkedIn" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://x.com/anastasiaarbuz" target="_blank">
+            <div class="contact-info">
+                <p>
+                    <strong>Contact:</strong><br>
+                    Email: <a href="mailto:arbuzova@bu.edu">arbuzova@bu.edu</a>
+                </p>
+                <p style="display: flex; gap: 10px; justify-content: center;">
+                    <a href="https://github.com/anastasiaarbuz" target="_blank">
+                        <img src="files/github-mark.png" alt="GitHub" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://www.linkedin.com/in/anastasia-arbuzova-yu/" target="_blank">
+                        <img src="files/LI-In-Bug.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://x.com/anastasiaarbuz" target="_blank">
                         <img src="files/x-logo-black.png" alt="X">
-                </a>
-            </p>
-        </div>
-
+                    </a>
+                </p>
+            </div>
         </div>
         <div class="right-column">
             <p>

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Anastasiia Arbuzova</title>
+    <title>Research - Anastasiia Arbuzova</title>
     <!-- Link to Google Fonts to include Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -18,33 +17,55 @@
         }
 
         header {
-            background-color: #002C58;
+            background-color: #002C58; /* Original background color */
             color: #FDFDFD;
-            padding: 40px;
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative; /* Needed for layering */
+            overflow: hidden; /* Ensures content stays within header */
+            height: 200px; /* Consistent height */
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 24px;
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('files/mini-bus.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        header h1,
+        header nav {
+            position: relative;
+            z-index: 2; /* Ensure text is above the background image */
         }
 
         header h1 a {
             color: #FDFDFD;
             text-decoration: none;
+            position: relative;
+            z-index: 3; /* Ensure the link is clickable above everything */
         }
 
         header nav {
             display: flex;
-            gap: 30px; /* Increase the gap between navigation items */
+            gap: 30px;
         }
 
         header nav a {
             color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
+            position: relative;
+            z-index: 3; /* Ensure navigation links are clickable */
         }
 
         header nav a:hover,
