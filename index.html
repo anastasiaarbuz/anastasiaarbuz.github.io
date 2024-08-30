@@ -24,12 +24,11 @@
             color: #FDFDFD;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Center the content */
             align-items: center;
-            flex-wrap: wrap;
+            height: 150px; /* Reduced height */
             position: relative;
             overflow: hidden;
-            height: 200px;
         }
 
         header::before {
@@ -46,30 +45,25 @@
             z-index: 1;
         }
 
-        header h1,
-        header nav {
-            position: relative;
-            z-index: 2;
-        }
-
-        header h1 a {
-            color: #FDFDFD;
-            text-decoration: none;
+        header h1 {
+            font-size: 32px; /* Larger font size */
             position: relative;
             z-index: 3;
+            text-align: center;
         }
 
         header nav {
+            position: absolute;
+            bottom: 10px;
+            z-index: 3;
             display: flex;
-            gap: 30px;
+            gap: 20px;
         }
 
         header nav a {
             color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
-            position: relative;
-            z-index: 3;
         }
 
         header nav a:hover {
@@ -95,13 +89,13 @@
             background-color: #FFFFFF;
             padding: 20px;
             border-radius: 8px;
+            gap: 40px; /* Increased gap between image and text */
         }
 
         .bio img {
-            max-width: 100%;
+            max-width: 350px; /* Larger image size */
             height: auto;
             border-radius: 8px;
-            margin-bottom: 20px;
         }
 
         .bio p {
@@ -134,35 +128,32 @@
             font-size: 10px;
             width: 100%;
             border-top: 1px solid #CCC;
-            margin-top: 20px; /* Adds space above the footer */
+            margin-top: 20px;
         }
 
         /* Media Queries for Responsive Design */
         @media (min-width: 768px) {
             header {
-                padding: 40px;
+                padding: 30px;
             }
 
             header h1 {
-                font-size: 24px;
-                flex: auto;
-                text-align: left;
+                font-size: 36px;
             }
 
             header nav {
-                justify-content: flex-end;
-                margin-top: 0;
+                justify-content: center;
             }
 
             .bio {
                 flex-direction: row;
                 text-align: left;
+                gap: 40px; /* Keep the spacing between image and text */
             }
 
             .bio img {
-                margin-right: 20px;
-                margin-bottom: 0;
-                max-width: 250px;
+                margin-right: 40px;
+                max-width: 400px; /* Larger image on bigger screens */
             }
 
             .contact-info {
@@ -173,7 +164,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="index.html">Anastasiia Arbuzova</a></h1>
+        <h1>Anastasiia Arbuzova</h1>
         <nav>
             <a href="cv.html">CV</a>
             <a href="research.html">Research</a>
