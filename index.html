@@ -26,7 +26,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 150px; /* Reduced height */
+            height: 150px;
             position: relative;
             overflow: hidden;
         }
@@ -46,10 +46,10 @@
         }
 
         header h1 {
-            font-size: 32px; /* Larger font size */
+            font-size: 32px;
             position: relative;
             z-index: 3;
-            margin: 0 auto 0 20px; /* Closer to center, with left margin */
+            margin: 0 auto 0 20px;
         }
 
         header nav {
@@ -80,19 +80,19 @@
 
         .bio {
             display: flex;
-            flex-direction: row; /* Aligns image and text in a row */
-            align-items: flex-start; /* Top-align the image with the text */
+            flex-direction: row;
+            align-items: flex-start;
             text-align: left;
-            max-width: 1000px; /* Widened the bio box */
+            max-width: 1000px;
             margin-top: 20px;
             background-color: #FFFFFF;
-            padding: 20px;
+            padding: 20px 40px 20px 20px;
             border-radius: 8px;
-            gap: 20px; /* Gap between image and text */
+            gap: 40px;
         }
 
         .bio img {
-            max-width: 250px;
+            width: clamp(150px, 10vw + 150px, 250px);
             height: auto;
             border-radius: 8px;
         }
@@ -142,8 +142,8 @@
         }
 
         .social-links img {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
         }
 
         /* Media Queries for Responsive Design */
@@ -161,11 +161,12 @@
             }
 
             .bio {
-                gap: 20px; /* Keep the spacing between image and text */
+                gap: 40px;
+                padding: 20px 60px 20px 20px;
             }
 
             .bio img {
-                max-width: 200px; /* Slightly larger image on bigger screens */
+                width: clamp(150px, 15vw + 150px, 250px);
             }
 
             .contact-info {
@@ -213,7 +214,6 @@
         </div>
     </div>
     <footer>
-        <p>&copy; Anastasiia Arbuzova, 2024. All rights reserved.</p>
         <div class="social-links">
             <a href="https://github.com/anastasiaarbuz" target="_blank">
                 <img src="files/github-mark.png" alt="GitHub">
