@@ -91,6 +91,16 @@
             gap: 60px;
         }
 
+        .bio p {
+            margin: 0 0 15px 0;
+            text-align: justify;
+        }
+
+        /* Optional: To ensure the last paragraph doesn't have extra space at the bottom */
+        .bio p:last-child {
+            margin-bottom: 0;
+        }
+
         .bio img {
             width: clamp(150px, 10vw + 150px, 250px);
             height: auto;
