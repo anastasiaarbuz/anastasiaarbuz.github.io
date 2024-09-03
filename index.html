@@ -20,8 +20,7 @@
         }
 
         header {
-
-            background-color: #002C58; /* Original background color */
+            background-color: #002C58;
             color: #FDFDFD;
             padding: 0 40px;
             display: flex;
@@ -49,7 +48,7 @@
             background-image: url('files/mini-bus.png');
             background-size: cover;
             background-position: center;
-            opacity: 0.27;
+            opacity: 0.3;
             z-index: 1;
         }
 
@@ -57,13 +56,6 @@
         header nav {
             position: relative;
             z-index: 2;
-        }
-
-        header h1 a {
-            color: #FDFDFD;
-            text-decoration: none;
-            position: relative;
-            z-index: 3;
         }
 
         header nav {
@@ -81,10 +73,7 @@
             z-index: 3;
         }        
 
-        header nav a:hover,
-        .abstract-preview:hover,
-        .media-links:hover,
-        .working-papers a:hover {
+        header nav a:hover {
             text-decoration: underline;
         }
 
@@ -120,6 +109,7 @@
         }
 
         .bio img {
+            flex-shrink: 0; /* Prevent image from shrinking */
             width: clamp(150px, 10vw + 150px, 250px);
             height: auto;
             border-radius: 8px;
@@ -136,11 +126,6 @@
         .contact-info a {
             text-decoration: none;
             color: #0043F1;
-        }
-
-        .contact-info img {
-            width: 24px;
-            height: 24px;
         }
 
         footer {
@@ -171,67 +156,51 @@
         }
 
         .upcoming-talks {
-            background-color: #f0f8ff; /* Light blue background */
+            background-color: #f0f8ff;
             padding: 10px;
             border-radius: 8px;
             margin-top: 20px;
         }
 
         /* Media Queries for Responsive Design */
-        .photo {
-            margin-left: 5%; /* Default margin for wider screens */
-            max-width: 100%; /* Ensure the photo resizes appropriately */
-        }
-
-        @media (max-width: 1200px) {
-            .photo {
-                margin-left: 4%; /* Slightly reduce margin on medium screens */
-            }
-        }
-
         @media (max-width: 768px) {
-            .photo {
-                margin-left: 3%; /* Further reduce margin on smaller screens */
+            header h1 {
+                font-size: 28px;
+                margin: 10px;
+            }
+
+            .bio {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 15px 20px;
+            }
+
+            .bio img {
+                margin-bottom: 20px;
             }
         }
 
         @media (max-width: 480px) {
-            .photo {
-                margin-left: 2%; /* Smallest margin on the narrowest screens */
-            }
-        }
-        
-        @media (min-width: 768px) {
             header {
-                padding: 30px;
-            }
-
-            header h1 {
-                font-size: 28px;
+                padding: 10px 20px;
             }
 
             header nav {
-                justify-content: flex-end;
+                gap: 15px;
+            }
+
+            header nav a {
+                font-size: 16px;
             }
 
             .bio {
-                gap: 40px;
-                padding: 20px 60px 20px 20px;
-            }
-
-            .bio p {
-            margin: 0 0 10px 0;
-            text-align: justify;
+                padding: 10px 15px;
             }
 
             .bio img {
-                width: clamp(150px, 15vw + 150px, 250px);
+                width: clamp(120px, 20vw + 100px, 200px);
             }
-
-            .contact-info {
-                align-items: flex-start;
-            }
-            
         }
     </style>
 </head>
@@ -247,27 +216,14 @@
         <div class="bio">
             <img src="files/Foto-132.jpg" alt="Photo of Anastasiia Arbuzova">
             <div>
-                <p>
-                    I am a PhD candidate in Economics at Boston University. My job market paper explores legitimacy concerns as a driver of electoral manipulations in autocracies and explores the question of optimal fraud allocation.
-                <p>
-                    &nbsp;
-                </p>
-                <p>
-                    I will be on the job market in AY 2024-2025.
-                </p>
-                <p>
-                    &nbsp;
-                </p>
-                <p>
-                    <strong>Fields:</strong> Political Economy, Development Economics<br>
-                </p>
+                <p>I am a PhD candidate in Economics at Boston University. My job market paper explores legitimacy concerns as a driver of electoral manipulations in autocracies and explores the question of optimal fraud allocation.</p>
+                <p><strong>Fields:</strong> Political Economy, Development Economics<br></p>
                 <div class="contact-info">
-                    <p>
-                        <strong>Email:</strong> <a href="mailto:arbuzova@bu.edu">arbuzova@bu.edu</a> <br>
-                    </p>
+                    <p><strong>Contact:</strong> <a href="mailto:arbuzova@bu.edu">arbuzova@bu.edu</a></p>
                 </div>
+                <p>I am on the job market in AY 2024-2025.</p>
                 <div class="upcoming-talks">
-                    <p>Upcoming talks:</p>
+                    <p><strong>Upcoming talks:</strong></p>
                     <ul>
                         <li>IPSA 75th Anniversary Conference</li>
                     </ul>
