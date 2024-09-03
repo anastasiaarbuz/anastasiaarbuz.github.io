@@ -3,7 +3,7 @@
 <head>
     <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Research - Anastasiia Arbuzova</title>
+    <title>PhD Candidate - Anastasiia Arbuzova</title>
     <!-- Link to Google Fonts to include Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -32,6 +32,13 @@
             height: 150px;
         }
 
+        header h1 {
+            font-size: 32px;
+            letter-spacing: 1.2px;
+            color: #FDFDFD;
+            margin: 0;
+        }
+
         header::before {
             content: '';
             position: absolute;
@@ -42,7 +49,7 @@
             background-image: url('files/mini-bus.png');
             background-size: cover;
             background-position: center;
-            opacity: 0.2;
+            opacity: 0.3;
             z-index: 1;
         }
 
@@ -69,7 +76,7 @@
             text-decoration: none;
             font-weight: 700;
             position: relative;
-            z-index: 3; /* Ensure navigation links are clickable */
+            z-index: 3;
         }
 
         header nav a:hover,
@@ -98,7 +105,7 @@
             background-color: #FFFFFF;
             padding: 30px 40px 20px 30px;
             border-radius: 8px;
-            gap: clamp(20px, 5vw, 100px); /* Makes gap responsive */
+            gap: clamp(50px, 5vw, 100px); /* Makes gap responsive */
         }
 
         .bio p {
@@ -161,6 +168,14 @@
             height: 24px;
         }
 
+        .upcoming-talks {
+            background-color: #f0f8ff; /* Light blue background */
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
         /* Media Queries for Responsive Design */
         .photo {
             margin-left: 5%; /* Default margin for wider screens */
@@ -215,6 +230,7 @@
             .contact-info {
                 align-items: flex-start;
             }
+            
         }
     </style>
 </head>
@@ -248,18 +264,18 @@
                     &nbsp;
                 </p>
                 <p>
-                    Upcoming talks:
-                    <ul>
-                        <li>IPSA 75th Anniversary Conference</li>
-                    </ul>
-                </p>
-                <p>
                     <strong>Fields:</strong> Political Economy, Development Economics<br>
                 </p>
                 <div class="contact-info">
                     <p>
                         <strong>Email:</strong> <a href="mailto:arbuzova@bu.edu">arbuzova@bu.edu</a> <br>
                     </p>
+                </div>
+                <div class="upcoming-talks">
+                    <p>Upcoming talks:</p>
+                    <ul>
+                        <li>IPSA 75th Anniversary Conference</li>
+                    </ul>
                 </div>
             </div>
         </div>
