@@ -152,6 +152,29 @@
         }
 
         /* Media Queries for Responsive Design */
+        .photo {
+            margin-left: 5%; /* Default margin for wider screens */
+            max-width: 100%; /* Ensure the photo resizes appropriately */
+        }
+
+        @media (max-width: 1200px) {
+            .photo {
+                margin-left: 4%; /* Slightly reduce margin on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .photo {
+                margin-left: 3%; /* Further reduce margin on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo {
+                margin-left: 2%; /* Smallest margin on the narrowest screens */
+            }
+        }
+        
         @media (min-width: 768px) {
             header {
                 padding: 30px;
