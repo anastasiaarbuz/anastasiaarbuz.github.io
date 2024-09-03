@@ -17,6 +17,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         header {
@@ -77,6 +78,11 @@
             text-decoration: underline;
         }
 
+        header, footer {
+            width: 100%; /* Ensures header and footer don't exceed viewport width */
+            overflow: hidden;
+        }
+
         .container {
             display: flex;
             flex-direction: column;
@@ -84,6 +90,7 @@
             justify-content: center;
             flex: 1;
             padding: 20px;
+            max-width: 100%;
         }
 
         .bio {
