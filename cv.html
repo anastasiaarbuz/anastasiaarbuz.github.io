@@ -3,7 +3,7 @@
 <head>
     <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Research - Anastasiia Arbuzova</title>
+    <title>CV - Anastasiia Arbuzova</title>
     <!-- Link to Google Fonts to include Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -17,15 +17,28 @@
         }
 
         header {
-            background-color: #002C58; /* Original background color */
+            background-color: #002C58;
             color: #FDFDFD;
             padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative; /* Needed for layering */
-            overflow: hidden; /* Ensures content stays within header */
-            height: 200px; /* Consistent height */
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        header h1 {
+            font-size: 34px;
+            letter-spacing: 1.4px;
+            color: #FDFDFD;
+            margin: 20px 0;
+            flex-grow: 1;
+        }
+
+        header h1 a {
+            color: #FDFDFD;
+            text-decoration: none;
         }
 
         header::before {
@@ -45,39 +58,31 @@
         header h1,
         header nav {
             position: relative;
-            z-index: 2; /* Ensure text is above the background image */
-        }
-
-        header h1 a {
-            color: #FDFDFD;
-            text-decoration: none;
-            position: relative;
-            z-index: 3; /* Ensure the link is clickable above everything */
+            z-index: 2;
         }
 
         header nav {
             display: flex;
             gap: 30px;
+            font-size: 18px;
         }
 
         header nav a {
             color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
+            letter-spacing: 1px;
             position: relative;
-            z-index: 3; /* Ensure navigation links are clickable */
+            z-index: 3;
         }
 
-        header nav a:hover,
-        .abstract-preview:hover,
-        .media-links:hover,
-        .working-papers a:hover {
+        header nav a:hover {
             text-decoration: underline;
         }
 
         section {
-            padding: 20px;
-            margin: 20px;
+            padding: 40px;
+            margin: 40px 60px;
             background: #F3F3F3;
             border-radius: 8px;
         }
@@ -107,13 +112,11 @@
         .download-link:hover {
             background-color: #002C58;
         }
-        
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1><a href="index.html">Anastasiia Arbuzova</a></h1
+        <h1><a href="index.html">Anastasiia Arbuzova</a></h1>
         <nav>
             <a href="cv.html">CV</a>
             <a href="research.html">Research</a>
@@ -129,5 +132,4 @@
     </section>
 
 </body>
-
 </html>
