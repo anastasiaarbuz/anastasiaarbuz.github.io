@@ -4,7 +4,7 @@
     <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>CV - Anastasiia Arbuzova</title>
-    <!-- Link to Google Fonts to include Inter font -->
+    <!-- Link to Google Fonts to include Merriweather font -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,7 +12,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #FDFDFD;
+            background-color: #FFFFFF; /* Plain white background */
             color: #000014;
         }
 
@@ -23,17 +23,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
-            overflow: hidden;
-            height: 200px;
+            height: 150px; /* Adjusted height */
         }
 
         header h1 {
             font-size: 34px;
             letter-spacing: 1.4px;
             color: #FDFDFD;
-            margin: 20px 0;
-            flex-grow: 1;
+            margin: 0;
         }
 
         header h1 a {
@@ -41,24 +38,9 @@
             text-decoration: none;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('files/mini-bus.png');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.2;
-            z-index: 1;
-        }
-
         header h1,
         header nav {
             position: relative;
-            z-index: 2;
         }
 
         header nav {
@@ -72,45 +54,24 @@
             text-decoration: none;
             font-weight: 700;
             letter-spacing: 1px;
-            position: relative;
-            z-index: 3;
         }
 
         header nav a:hover {
             text-decoration: underline;
         }
 
-        section {
-            padding: 40px;
-            margin: 40px 60px;
-            background: #F3F3F3;
-            border-radius: 8px;
-        }
-
+        /* Container with similar width as teaching page */
         .embed-container {
             text-align: center;
-            margin-top: 20px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px; /* Same width as the teaching page */
         }
 
         .embed-container embed {
             width: 100%;
-            height: 600px;
-            border: 1px solid #EAEAEA;
-            border-radius: 8px;
-        }
-
-        .download-link {
-            margin-top: 15px;
-            display: inline-block;
-            background-color: #0043F1;
-            color: #FDFDFD;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-
-        .download-link:hover {
-            background-color: #002C58;
+            height: 800px; /* Height set to show more content */
+            border: none;
         }
     </style>
 </head>
@@ -124,12 +85,8 @@
         </nav>
     </header>
 
-    <section>
-        <h2>Curriculum Vitae</h2>
-        <div class="embed-container">
-            <embed src="files/CV_JobMarket_Arbuzova.pdf" type="application/pdf">
-        </div>
-    </section>
-
+    <div class="embed-container">
+        <embed src="files/CV_JobMarket_Arbuzova.pdf" type="application/pdf">
+    </div>
 </body>
 </html>
