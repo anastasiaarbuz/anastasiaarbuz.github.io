@@ -80,13 +80,15 @@
             text-decoration: underline;
         }
 
-        /* Container similar to teaching page */
+        /* Container Properties Matching Teaching Page */
         .container {
             padding: 30px;
             margin: 40px auto; /* Center the container */
-            max-width: 1200px; /* Maximum width for the container */
+            max-width: 1200px; /* Maximum width same as teaching page */
+            width: 90%; /* Responsive width for smaller screens */
             background: #F3F3F3;
             border-radius: 8px;
+            box-sizing: border-box;
         }
 
         .working-papers h3 {
@@ -115,6 +117,21 @@
             font-size: 0.9em;
             color: #000014;
             text-indent: 20px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%; /* Increase width for smaller screens */
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%; /* Full width on mobile */
+                padding: 15px;
+            }
         }
     </style>
     <script>
