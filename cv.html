@@ -16,69 +16,49 @@
             color: #000014;
         }
 
-        header {
-            background-color: #002C58;
+        /* Header Image */
+        .header-image {
+            width: 100%;
+            height: 250px;
+            background-image: url('files/mini-bus.png'); /* Replace with your header image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Blue Bar Below Header */
+        .header-bar {
+            background-color: #0043F1; /* Blue color for bar */
             color: #FDFDFD;
-            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 200px; /* Maintain previous header height */
-            position: relative;
-            overflow: hidden;
+            padding: 10px 40px;
+            height: 60px;
+            box-sizing: border-box;
         }
 
-        header h1 {
-            font-size: 34px;
-            letter-spacing: 1.4px;
-            color: #FDFDFD;
-            margin: 20px 0;
-            flex-grow: 1;
+        .header-bar h1 {
+            font-size: 28px;
+            margin: 0;
         }
 
-        header h1 a {
-            color: #FDFDFD;
-            text-decoration: none;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('files/mini-bus.png'); /* Maintain background image */
-            background-size: cover;
-            background-position: center;
-            opacity: 0.2;
-            z-index: 1;
-        }
-
-        header h1,
-        header nav {
-            position: relative;
-            z-index: 2;
-        }
-
-        header nav {
+        .header-bar nav {
             display: flex;
-            gap: 30px;
-            font-size: 18px;
+            gap: 20px;
         }
 
-        header nav a {
+        .header-bar nav a {
             color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            font-size: 16px;
         }
 
-        header nav a:hover {
+        .header-bar nav a:hover {
             text-decoration: underline;
         }
 
-        /* Container with similar width as teaching page */
         .embed-container {
             text-align: center;
             padding: 20px;
@@ -91,18 +71,24 @@
             height: 800px; /* Height set to show more content */
             border: none;
         }
+
     </style>
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">Anastasiia Arbuzova</a></h1>
+    <!-- Header Image Section -->
+    <div class="header-image"></div>
+
+    <!-- Blue Bar with Name and Navigation -->
+    <div class="header-bar">
+        <h1>Anastasiia Arbuzova</h1>
         <nav>
             <a href="cv.html">CV</a>
             <a href="research.html">Research</a>
             <a href="teaching.html">Teaching</a>
         </nav>
-    </header>
+    </div>
 
+    <!-- CV Embed Container -->
     <div class="embed-container">
         <embed src="files/CV_JobMarket_Arbuzova.pdf" type="application/pdf">
     </div>
