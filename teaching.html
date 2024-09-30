@@ -4,11 +4,11 @@
     <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Teaching - Anastasiia Arbuzova</title>
-    <!-- Link to Google Fonts to include Inter font -->
+    <!-- Link to Google Fonts to include Merriweather font -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            Lohmann (1993, 1994)
+            font-family: 'Merriweather', serif; /* Use Merriweather font */
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -80,11 +80,30 @@
             text-decoration: underline;
         }
 
+        /* Centered container with wider width */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px; /* Wider max width */
+            width: 100%;
+            padding: 20px 40px;
+            margin: 40px auto; /* Centering the container */
+            box-sizing: border-box;
+        }
+
         section {
-            padding: 20px;
-            margin: 40px 60px;
+            padding: 30px;
             background: #F3F3F3;
             border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        section h2 {
+            margin-top: 0;
+            font-size: 24px;
         }
 
         .syllabus-link {
@@ -97,11 +116,18 @@
         .syllabus-link:hover {
             text-decoration: underline;
         }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
 <body>
-
     <header>
         <h1><a href="index.html">Anastasiia Arbuzova</a></h1>
         <nav>
@@ -111,21 +137,24 @@
         </nav>
     </header>
 
-    <section>
-        <h2>Instructor</h2>
-        <ul>
-            <li>Summer Challenge: Economics, Boston University, Summer 2024 <a href="/files/SummerChallenge3_Economics_2024_Syllabus.pdf" class="syllabus-link" download>Syllabus</a></li>
-            <li>EC101 Introductory Microeconomics, Boston University, Summer 2023 <a href="/files/Syllabus_EC101B2.pdf" class="syllabus-link" download>Syllabus</a></li>
-        </ul>
-        <h2>Teaching Fellow</h2>
-        <ul>
-            <li>EC101 Introductory Microeconomics, Boston University, Fall 2021-Fall 2024</li>
-            <li>EC320 Development Economics, Boston University, Fall 2023</li>
-            <li>EC328 Urban and Regional Economics, Boston University, Fall 2023</li>
-            <li>Calculus II, Higher School of Economics, Fall 2017</li>
-        </ul>
-    </section>
+    <!-- Main content container for wider layout -->
+    <div class="container">
+        <section>
+            <h2>Instructor</h2>
+            <ul>
+                <li>Summer Challenge: Economics, Boston University, Summer 2024 <a href="/files/SummerChallenge3_Economics_2024_Syllabus.pdf" class="syllabus-link" download>Syllabus</a></li>
+                <li>EC101 Introductory Microeconomics, Boston University, Summer 2023 <a href="/files/Syllabus_EC101B2.pdf" class="syllabus-link" download>Syllabus</a></li>
+            </ul>
+
+            <h2>Teaching Fellow</h2>
+            <ul>
+                <li>EC101 Introductory Microeconomics, Boston University, Fall 2021-Fall 2024</li>
+                <li>EC320 Development Economics, Boston University, Fall 2023</li>
+                <li>EC328 Urban and Regional Economics, Boston University, Fall 2023</li>
+                <li>Calculus II, Higher School of Economics, Fall 2017</li>
+            </ul>
+        </section>
+    </div>
 
 </body>
-
 </html>
