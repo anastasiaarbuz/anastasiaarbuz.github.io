@@ -4,6 +4,7 @@
     <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>CV - Anastasiia Arbuzova</title>
+    <!-- Link to Google Fonts to include Merriweather font -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -11,7 +12,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #FDFDFD;
+            background-color: #FFFFFF; /* Plain white background */
             color: #000014;
         }
 
@@ -79,25 +80,34 @@
             text-decoration: underline;
         }
 
-        .container {
-            padding: 20px;
-            margin: 40px 60px;
-            background: #F3F3F3;
-            border-radius: 8px;
-        }
-
+        /* Embed Container for displaying the PDF */
         .embed-container {
             text-align: center;
             padding: 20px;
-            margin: 40px auto;
-            max-width: 1000px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1000px; /* Maximum width to control size */
+            box-sizing: border-box;
         }
 
+        /* Style for the embedded PDF */
         .embed-container embed {
             width: 100%;
-            height: 800px;
-            border: 1px solid #EAEAEA;
-            border-radius: 8px;
+            height: 1200px; /* Larger height to show more content */
+            border: none;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .embed-container embed {
+                height: 900px; /* Decrease height for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .embed-container embed {
+                height: 600px; /* Further decrease height for mobile screens */
+            }
         }
     </style>
 </head>
@@ -113,10 +123,9 @@
         </nav>
     </header>
 
-    <div class="container">
-        <div class="embed-container">
-            <embed src="files/CV_JobMarket_Arbuzova.pdf" type="application/pdf">
-        </div>
+    <!-- Main content container for displaying PDF -->
+    <div class="embed-container">
+        <embed src="files/CV_JobMarket_Arbuzova.pdf" type="application/pdf">
     </div>
 
 </body>
