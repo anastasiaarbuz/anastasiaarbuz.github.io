@@ -4,7 +4,6 @@
     <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>CV - Anastasiia Arbuzova</title>
-    <!-- Link to Google Fonts to include Merriweather font -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,101 +11,113 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #FFFFFF;
+            background-color: #FDFDFD;
             color: #000014;
         }
 
-        /* Header Image Section with Dark Blue Background */
-        .header-image {
+        header {
+            background-color: #002C58;
+            color: #FDFDFD;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: relative;
-            width: 100%;
-            height: 250px;
-            background-color: #002C58; /* Dark blue background color */
             overflow: hidden;
+            height: 200px;
         }
 
-        /* Layered background image with opacity */
-        .header-image::before {
+        header h1 {
+            font-size: 34px;
+            letter-spacing: 1.4px;
+            color: #FDFDFD;
+            margin: 20px 0;
+            flex-grow: 1;
+        }
+
+        header h1 a {
+            color: #FDFDFD;
+            text-decoration: none;
+        }
+
+        header::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('files/mini-bus.png'); /* Replace with your header image */
+            background-image: url('files/mini-bus.png');
             background-size: cover;
             background-position: center;
-            opacity: 0.2; /* Set image opacity */
+            opacity: 0.2;
             z-index: 1;
         }
 
-        /* Dark Blue Bar Below Header */
-        .header-bar {
-            background-color: #002C58; /* Dark blue color for bar */
-            color: #FDFDFD;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 40px;
-            height: 60px;
-            box-sizing: border-box;
+        header h1,
+        header nav {
+            position: relative;
             z-index: 2;
         }
 
-        .header-bar h1 {
-            font-size: 28px;
-            margin: 0;
-        }
-
-        .header-bar nav {
+        header nav {
             display: flex;
-            gap: 20px;
+            gap: 30px;
+            font-size: 16px;
         }
-
-        .header-bar nav a {
+        
+        header nav a {
             color: #FDFDFD;
             text-decoration: none;
             font-weight: 700;
-            letter-spacing: 0.5px;
-            font-size: 16px;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 3;
         }
 
-        .header-bar nav a:hover {
+        header nav a:hover {
             text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+            margin: 40px 60px;
+            background: #F3F3F3;
+            border-radius: 8px;
         }
 
         .embed-container {
             text-align: center;
             padding: 20px;
-            margin: 40px auto; /* Center the embed container with spacing */
-            max-width: 1200px; /* Same width as the teaching page */
+            margin: 40px auto;
+            max-width: 1000px;
         }
 
         .embed-container embed {
             width: 100%;
-            height: 800px; /* Height set to show more content */
-            border: none;
+            height: 800px;
+            border: 1px solid #EAEAEA;
+            border-radius: 8px;
         }
-
     </style>
 </head>
-<body>
-    <!-- Header Image Section -->
-    <div class="header-image"></div>
 
-    <!-- Blue Bar with Name and Navigation -->
-    <div class="header-bar">
-        <h1>Anastasiia Arbuzova</h1>
+<body>
+
+    <header>
+        <h1><a href="index.html" style="color: #FDFDFD; text-decoration: none;">Anastasiia Arbuzova</a></h1>
         <nav>
             <a href="cv.html">CV</a>
             <a href="research.html">Research</a>
             <a href="teaching.html">Teaching</a>
         </nav>
+    </header>
+
+    <div class="container">
+        <div class="embed-container">
+            <embed src="files/CV_JobMarket_Arbuzova.pdf" type="application/pdf">
+        </div>
     </div>
 
-    <!-- CV Embed Container -->
-    <div class="embed-container">
-        <embed src="files/CV_JobMarket_Arbuzova.pdf" type="application/pdf">
-    </div>
 </body>
 </html>
