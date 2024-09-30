@@ -4,7 +4,7 @@
     <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Research - Anastasiia Arbuzova</title>
-    <!-- Link to Google Fonts to include Inter font -->
+    <!-- Link to Google Fonts to include Merriweather font -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -80,9 +80,11 @@
             text-decoration: underline;
         }
 
-        section {
-            padding: 20px;
-            margin: 40px 60px;
+        /* Container similar to teaching page */
+        .container {
+            padding: 30px;
+            margin: 40px auto; /* Center the container */
+            max-width: 1200px; /* Maximum width for the container */
             background: #F3F3F3;
             border-radius: 8px;
         }
@@ -141,7 +143,8 @@
         </nav>
     </header>
 
-    <section>
+    <!-- Main container for the research content -->
+    <div class="container">
         <h2>Working Papers</h2>
         <div class="working-papers">
             <h3>
@@ -175,7 +178,7 @@
                 <span onclick="toggleAbstract('abstract3')">Abstract: This paper explores whether social connectedness can help a unified voting strategy overcome the collective action problem of opposition, using the 2021 Russian legislative elections as a case study. I utilize Vkontakte, one of Russia's most popular social media platforms, to construct a social network and calculate measures of connectedness at localities. By analyzing election results at the precinct level, I show that the suggested voting strategy decreased incumbent vote shares in areas with higher social connectedness and stronger opposition presence.</span>
             </span>
         </div>
-    </section>
+    </div>
 
 </body>
 </html>
