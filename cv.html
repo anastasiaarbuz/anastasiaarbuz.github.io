@@ -16,15 +16,28 @@
             color: #000014;
         }
 
-        /* Header Image with Dark Blue Background */
+        /* Header Image Section with Dark Blue Background */
         .header-image {
+            position: relative;
             width: 100%;
             height: 250px;
             background-color: #002C58; /* Dark blue background color */
+            overflow: hidden;
+        }
+
+        /* Layered background image with opacity */
+        .header-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('files/mini-bus.png'); /* Replace with your header image */
             background-size: cover;
             background-position: center;
             opacity: 0.2; /* Set image opacity */
+            z-index: 1;
         }
 
         /* Dark Blue Bar Below Header */
@@ -37,6 +50,7 @@
             padding: 10px 40px;
             height: 60px;
             box-sizing: border-box;
+            z-index: 2;
         }
 
         .header-bar h1 {
