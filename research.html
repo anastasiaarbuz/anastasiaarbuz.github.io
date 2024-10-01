@@ -128,7 +128,27 @@
             text-indent: 20px;
         }
 
-        /* Responsive Adjustments */
+        /* Additional links list styling */
+        .additional-links {
+            font-size: 0.9em; /* Match font size to abstract */
+            line-height: 1.6;
+            list-style-type: disc; /* Bulleted list */
+            margin: 10px 0 10px 20px; /* Spacing around list */
+        }
+
+        .additional-links li {
+            margin-bottom: 5px; /* Spacing between list items */
+        }
+
+        .additional-links a {
+            color: rgb(60, 136, 247);
+            text-decoration: none; /* No underline */
+        }
+
+        .additional-links a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
         @media (max-width: 768px) {
             .container {
                 width: 95%; /* Increase width for smaller screens */
@@ -186,19 +206,21 @@
             <h3>
                 <a href="link_to_paper_2.pdf" target="_blank" class="title-link">Gendered Differences in Mobility and the Demand for Transport in Ethiopia</a>
             </h3>
-            <span> with Tigabu Getahun, Ammar A. Malik, and Mahesh Karra | Coverage: <a href="https://www.theigc.org/publications/gendered-differences-mobility-and-demand-transport-ethiopia" target="_blank" class="media-links">IGC Policy Brief</a>, <a href="https://www.bu.edu/gdp/2022/11/09/need-a-ride-understanding-latent-demand-for-travel-experimental-evidence-from-urban-ethiopia/" target="_blank" class="media-links">BU GDP Center Blog</a></span>
+            <span> with Tigabu Getahun, Ammar A. Malik, and Mahesh Karra</span>
             <br>
             <span class="abstract-preview" id="abstract2-preview" onclick="toggleAbstract('abstract2')">Abstract: We assess the extent to which travel demand varies by gender...</span>
             <span class="abstract-full" id="abstract2-full">
                 <span onclick="toggleAbstract('abstract2')">Abstract: We assess the extent to which travel demand varies by gender, particularly for women, with the introduction of high-quality transport in urban Ethiopia. A total of over 1,000 married couples in Addis Ababa were offered an allowance for on-demand, private taxi services over a two-month period. The allowance recipient was randomized to be either the woman, the man, or the couple jointly. Additionally, the total allowance amount was randomized between Low (ETB 1540) and High (ETB 4100). We document significant baseline gender differences in mobility, with 80 percent of men traveling daily or almost every day compared to less than 40 percent of women. As a result of the intervention, we find no significant differences in taxi service utilization measured by allowance take-up, total trips made, the proportion of credit spent, and the average trip cost between the Woman and Man arms, suggesting that the improved transport option may have contributed to closing the gender gap in physical mobility.</span>
+                <ul class="additional-links">
+                <li>Policy brief:<a href="https://www.theigc.org/publications/gendered-differences-mobility-and-demand-transport-ethiopia" target="_blank"   class="media-links">IGC Policy Brief</a></li>
+                <li>Blog posts:<a href="https://www.bu.edu/gdp/2022/11/09/need-a-ride-understanding-latent-demand-for-travel-experimental-evidence-from-urban-ethiopia/" target="_blank" class="media-links">BU GDP Center Blog</a></li>
+                </ul>
             </span>
         </div>
         <br><br>
         <h2>Work in Progress</h2>
         <div class="working-papers">
-            <h3>
-                <a href="link_to_paper_3.pdf" target="_blank" class="title-link">Social Networks and Solving Collective Action Problem</a>
-            </h3>
+            <h3 class="title-link">Social Networks and Solving Collective Action Problem</h3>
             <span class="abstract-preview" id="abstract3-preview" onclick="toggleAbstract('abstract3')">Abstract: This paper explores whether social connectedness can help a unified voting strategy overcome.. </span>
             <span class="abstract-full" id="abstract3-full">
                 <span onclick="toggleAbstract('abstract3')">Abstract: This paper explores whether social connectedness can help a unified voting strategy overcome the collective action problem of opposition, using the 2021 Russian legislative elections as a case study. I utilize Vkontakte, one of Russia's most popular social media platforms, to construct a social network and calculate measures of connectedness at localities. By analyzing election results at the precinct level, I show that the suggested voting strategy decreased incumbent vote shares in areas with higher social connectedness and stronger opposition presence.</span>
