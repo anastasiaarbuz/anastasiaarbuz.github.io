@@ -80,35 +80,26 @@
             text-decoration: underline;
         }
 
-        /* Centered container with wider width */
+        /* Centered container with same width as research page */
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 1200px; /* Wider max width */
-            width: 100%;
-            padding: 20px 40px;
-            margin: 40px auto; /* Centering the container */
-            box-sizing: border-box;
-        }
-
-        section {
             padding: 30px;
-            background: #F3F3F3;
-            border-radius: 8px;
-            width: 100%;
+            margin: 40px auto;
+            max-width: 1200px;
+            width: 90%;
             box-sizing: border-box;
         }
 
-        section h2 {
-            margin-top: 0;
-            font-size: 24px;
+        /* Line separators for sections */
+        .container h2 {
+            border-bottom: 2px solid #0043F1; /* Line separator below h2 */
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 24px; /* Match font size with research */
         }
 
         .syllabus-link {
             margin-left: 10px;
-            color: #80A1F8;
+            color: rgb(0, 86, 254); /* #80A1F8 */
             text-decoration: none;
             font-size: 14px;
         }
@@ -119,10 +110,33 @@
 
         ul {
             padding-left: 20px;
+            margin-top: 0;
         }
 
         li {
             margin-bottom: 10px;
+        }
+
+        /* Line separators between sections */
+        .line-separator {
+            border-top: 2px solid #0043F1;
+            margin: 30px 0;
+            width: 100%;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -137,24 +151,25 @@
         </nav>
     </header>
 
-    <!-- Main content container for wider layout -->
+    <!-- Main content container with no background color and line separators -->
     <div class="container">
-        <section>
-            <h2>Instructor</h2>
-            <ul>
-                <li>Summer Challenge: Economics, Boston University, Summer 2024 <a href="/files/SummerChallenge3_Economics_2024_Syllabus.pdf" class="syllabus-link" download>Syllabus</a></li>
-                <li>EC101 Introductory Microeconomics, Boston University, Summer 2023 <a href="/files/Syllabus_EC101B2.pdf" class="syllabus-link" download>Syllabus</a></li>
-            </ul>
+        <h2>Instructor</h2>
+        <ul>
+            <li>Summer Challenge: Economics, Boston University, Summer 2024 <a href="/files/SummerChallenge3_Economics_2024_Syllabus.pdf" class="syllabus-link" download>Syllabus</a></li>
+            <li>EC101 Introductory Microeconomics, Boston University, Summer 2023 <a href="/files/Syllabus_EC101B2.pdf" class="syllabus-link" download>Syllabus</a></li>
+        </ul>
 
-            <h2>Teaching Fellow</h2>
-            <ul>
-                <li>EC101 Introductory Microeconomics, Boston University, Spring 2021 - Fall 2024</li>
-                <li>EC320 Development Economics, Boston University, Fall 2023</li>
-                <li>EC328 Urban and Regional Economics, Boston University, Fall 2023</li>
-                <li>EC102 Introductory Macroeconomics, Boston University, Spring 2022</li>
-                <li>Calculus II, Higher School of Economics, Fall 2017</li>
-            </ul>
-        </section>
+        <!-- Line separator between sections -->
+        <div class="line-separator"></div>
+
+        <h2>Teaching Fellow</h2>
+        <ul>
+            <li>EC101 Introductory Microeconomics, Boston University, Spring 2021 - Fall 2024</li>
+            <li>EC320 Development Economics, Boston University, Fall 2023</li>
+            <li>EC328 Urban and Regional Economics, Boston University, Fall 2023</li>
+            <li>EC102 Introductory Macroeconomics, Boston University, Spring 2022</li>
+            <li>Calculus II, Higher School of Economics, Fall 2017</li>
+        </ul>
     </div>
 
 </body>
