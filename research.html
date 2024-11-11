@@ -4,7 +4,6 @@
     <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Research - Anastasiia Arbuzova</title>
-    <!-- Link to Google Fonts to include Merriweather font -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -41,26 +40,6 @@
             text-decoration: none;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('files/mini-bus.png');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.2;
-            z-index: 1;
-        }
-
-        header h1,
-        header nav {
-            position: relative;
-            z-index: 2;
-        }
-
         header nav {
             display: flex;
             gap: 30px;
@@ -80,36 +59,38 @@
             text-decoration: underline;
         }
 
-        /* Container Properties */
         .container {
             padding: 30px;
-            margin: 40px auto; /* Center the container */
-            max-width: 1200px; /* Maximum width same as teaching page */
-            width: 90%; /* Responsive width for smaller screens */
+            margin: 40px auto;
+            max-width: 1200px;
+            width: 90%;
             box-sizing: border-box;
         }
 
         .container h2 {
-            border-bottom: 2px solid #EAEAEA; /* Line separator below h2 */
+            border-bottom: 2px solid #EAEAEA;
             padding-bottom: 10px;
             margin-bottom: 30px;
         }
 
-        .working-papers h3 {
-            color: #000014;
-            font-weight: normal;
-            margin-bottom: 5px;
-            cursor: default;
+        .paper-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
         }
 
-        .working-papers a.title-link {
+        .paper-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .title-link {
             color: rgb(60, 136, 247);
             font-weight: bold;
             text-decoration: none;
         }
 
-        .working-papers a.title-link:hover {
-            /*color: rgb(40, 116, 227);*/
+        .title-link:hover {
             text-decoration: underline;
         }
 
@@ -127,47 +108,44 @@
             color: #000014;
             text-indent: 20px;
         }
-        
+
+        .paper-image {
+            width: 120px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
         .other-writings {
             font-size: 0.9em;
             line-height: 1.6;
             margin-top: 10px;
-            display: inline-block; /* Keep it inline with subsequent elements */
         }
 
         .additional-links {
             font-size: 0.9em;
-            line-height: 1.6;
             list-style-type: disc;
             margin: 10px 0 10px 20px;
         }
 
         .additional-links li {
-            margin-bottom: 5px; /* Spacing between each bullet point */
-            padding-left: 1px; /* Reduce padding to bring text closer */
-            list-style-position: inside; /* Adjust bullet position to inside */
+            margin-bottom: 5px;
+            list-style-position: inside;
         }
 
         .additional-links a {
             color: rgb(0, 86, 254);
-            text-decoration: none; /* No underline */
+            text-decoration: none;
         }
 
         .additional-links a:hover {
-            text-decoration: underline; /* Underline on hover */
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
             .container {
-                width: 95%; /* Increase width for smaller screens */
+                width: 95%;
                 padding: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                width: 100%; /* Full width on mobile */
-                padding: 15px;
             }
         }
     </style>
@@ -197,46 +175,53 @@
         </nav>
     </header>
 
-    <!-- Main container for the research content -->
     <div class="container">
         <h2>Working Papers</h2>
-        <div class="working-papers">
-            <h3>
-                <a href="papers/jmp_arbuzova.pdf" target="_blank" class="title-link">Fraud and Legitimacy: The Economics of Autocratic Elections</a>
-            </h3>
-            <span><em>Job Market Paper</em></span>
-            <br>
-            <span class="abstract-preview" id="abstract1-preview" onclick="toggleAbstract('abstract1')">Abstract: Why do autocracies employ seemingly excessive electoral fraud when victory is virtually guaranteed?..</span>
-            <span class="abstract-full" id="abstract1-full">
-                <span onclick="toggleAbstract('abstract1')">Abstract: Why do autocracies employ seemingly excessive electoral fraud when victory is virtually guaranteed? This paper examines whether an autocratic government can use fraud to improve its perceived legitimacy, especially when it is damaged by unrest or unpopular policies. Through a survey experiment with a representative sample of Russian voters, I demonstrate that reported election outcomes can influence voters' perceptions: information about high (low) turnout increases (decreases) trust in the government. Next, analyzing data from the 2021 Russian legislative elections, I identify electoral manipulations via the excess integer values method and hypothesize that legitimacy concerns can explain their spatial distribution. Utilizing a novel dataset on the 2018 anti-pension reform protests, I show that protests informed fraud allocation: places with higher protest participation experienced higher electoral fraud in the subsequent legislative elections.</span>
-            </span>
 
-            <h3>
-                <a href="papers/ewts.pdf" target="_blank" class="title-link">Gendered Differences in Mobility and the Demand for Transport in Ethiopia</a>
-            </h3>
-            <span> with Tigabu Getahun, Ammar A. Malik, and Mahesh Karra</span>
-            <br>
-            <span class="abstract-preview" id="abstract2-preview" onclick="toggleAbstract('abstract2')">Abstract: We assess the extent to which travel demand varies by gender...</span>
-            <span class="abstract-full" id="abstract2-full">
-                <span onclick="toggleAbstract('abstract2')">Abstract: We assess the extent to which travel demand varies by gender, particularly for women, with the introduction of high-quality transport in urban Ethiopia. A total of over 1,000 married couples in Addis Ababa were offered an allowance for on-demand, private taxi services over a two-month period. The allowance recipient was randomized to be either the woman, the man, or the couple jointly. Additionally, the total allowance amount was randomized between Low (ETB 1540) and High (ETB 4100). We document significant baseline gender differences in mobility, with 80 percent of men traveling daily or almost every day compared to less than 40 percent of women. As a result of the intervention, we find no significant differences in taxi service utilization measured by allowance take-up, total trips made, the proportion of credit spent, and the average trip cost between the Woman and Man arms, suggesting that the improved transport option may have contributed to closing the gender gap in physical mobility.</span>
-            </span>
-            <br>
-            <span class="other-writings">Other writings:</span>
+        <div class="paper-container">
+            <div class="paper-content">
+                <h3><a href="papers/jmp_arbuzova.pdf" target="_blank" class="title-link">Fraud and Legitimacy: The Economics of Autocratic Elections</a></h3>
+                <span><em>Job Market Paper</em></span>
+                <br>
+                <span class="abstract-preview" id="abstract1-preview" onclick="toggleAbstract('abstract1')">Abstract: Why do autocracies employ seemingly excessive electoral fraud when victory is virtually guaranteed?..</span>
+                <span class="abstract-full" id="abstract1-full">
+                    Abstract: Why do autocracies employ seemingly excessive electoral fraud when victory is virtually guaranteed? This paper examines whether an autocratic government can use fraud to improve its perceived legitimacy...
+                </span>
+            </div>
+            <img src="path/to/your-image1.jpg" alt="Image for Fraud and Legitimacy" class="paper-image">
+        </div>
+
+        <div class="paper-container">
+            <div class="paper-content">
+                <h3><a href="papers/ewts.pdf" target="_blank" class="title-link">Gendered Differences in Mobility and the Demand for Transport in Ethiopia</a></h3>
+                <span>with Tigabu Getahun, Ammar A. Malik, and Mahesh Karra</span>
+                <br>
+                <span class="abstract-preview" id="abstract2-preview" onclick="toggleAbstract('abstract2')">Abstract: We assess the extent to which travel demand varies by gender...</span>
+                <span class="abstract-full" id="abstract2-full">
+                    Abstract: We assess the extent to which travel demand varies by gender, particularly for women, with the introduction of high-quality transport in urban Ethiopia...
+                </span>
+                <span class="other-writings">Other writings:</span>
                 <ul class="additional-links">
-                    <li><a href="https://www.theigc.org/publications/gendered-differences-mobility-and-demand-transport-ethiopia" target="_blank"   class="media-links">IGC Policy Brief</a></li>
-                    <li><a href="https://www.bu.edu/gdp/2022/11/09/need-a-ride-understanding-latent-demand-for-travel-experimental-evidence-from-urban-ethiopia/" target="_blank" class="media-links">BU GDP Center Blog</a></li>
+                    <li><a href="https://www.theigc.org/publications/gendered-differences-mobility-and-demand-transport-ethiopia" target="_blank">IGC Policy Brief</a></li>
+                    <li><a href="https://www.bu.edu/gdp/2022/11/09/need-a-ride-understanding-latent-demand-for-travel-experimental-evidence-from-urban-ethiopia/" target="_blank">BU GDP Center Blog</a></li>
                 </ul>
+            </div>
+            <img src="path/to/your-image2.jpg" alt="Image for Gendered Differences" class="paper-image">
         </div>
-        <br><br>
-        <h2>Work in Progress</h2>
-        <div class="working-papers">
-            <h3 class="title-link">Social Networks and Solving Collective Action Problem</h3>
-            <span class="abstract-preview" id="abstract3-preview" onclick="toggleAbstract('abstract3')">Abstract: This paper investigates whether social connectedness can help opposition overcome the collective action problem... </span>
-            <span class="abstract-full" id="abstract3-full">
-                <span onclick="toggleAbstract('abstract3')">Abstract: This paper investigates whether social connectedness can help opposition overcome the collective action problem by facilitating spread of a unified voting strategy. I construct a social network graph using public profiles from VKontakte, one of Russia's most popular social media platforms, and calculate measures of social connectedness (density and average path length) at a city level. My findings reveal that higher connectedness amplifies the effect of opposition presence, a proxy for voting strategy utilization, and is associated with a lower incumbent vote share.</span>
-            </span>
-        </div>
-    </div>
 
+        <h2>Work in Progress</h2>
+
+        <div class="paper-container">
+            <div class="paper-content">
+                <h3 class="title-link">Social Networks and Solving Collective Action Problem</h3>
+                <span class="abstract-preview" id="abstract3-preview" onclick="toggleAbstract('abstract3')">Abstract: This paper investigates whether social connectedness can help opposition overcome the collective action problem... </span>
+                <span class="abstract-full" id="abstract3-full">
+                    Abstract: This paper investigates whether social connectedness can help opposition overcome the collective action problem by facilitating spread of a unified voting strategy...
+                </span>
+            </div>
+            <img src="path/to/your-image3.jpg" alt="Image for Social Networks" class="paper-image">
+        </div>
+
+    </div>
 </body>
 </html>
