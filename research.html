@@ -106,19 +106,21 @@
             font-size: 0.9em;
             color: #000014;
             text-indent: 20px;
-            max-width: calc(100% - 220px); /* Adjusts the width of the abstract to fill up to the image column */
+            max-width: calc(100% - 220px); /* Ensures the abstract expands up to the image column */
         }
 
         .paper-image-container {
             width: 200px; /* Fixed width for the image column */
             flex-shrink: 0;
+            display: flex;
+            align-items: flex-start;
         }
 
         .paper-image {
-            width: 100%;
-            height: auto;
+            width: 250px;
+            max-height: 80px; /* Limit the image height to align with the title and preview only */
             border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            object-fit: cover; /* Ensures the image fits within the specified dimensions */
         }
 
         .other-writings {
@@ -217,10 +219,11 @@
                 <span class="abstract-full" id="abstract2-full">
                     Abstract: We assess the extent to which travel demand varies by gender, particularly for women, with the introduction of high-quality transport in urban Ethiopia. A total of 1,022 married couples in Addis Ababa were offered an allowance for on-demand, private taxi services over a two-month period. The allowance recipient was randomized to be either the woman, the man, or the couple jointly. Additionally, the total allowance amount was randomized to either "low" (30 USD) or "high" (80 USD) amounts. We document significant baseline gender differences in mobility, with 80 percent of men traveling daily or almost every day compared to less than 40 percent of women. As a result of the intervention, we find no significant differences in taxi service utilization measured by allowance take-up, total trips made, the proportion of credit spent, and the average trip cost between the Woman and Man arms, suggesting that the improved transport option may have contributed to closing the gender gap in physical mobility.
                 </span>
+                <br>
                 <span class="other-writings">Other writings:</span>
                 <ul class="additional-links">
-                    <li><a href="https://www.theigc.org/publications/gendered-differences-mobility-and-demand-transport-ethiopia" target="_blank">IGC Policy Brief</a></li>
-                    <li><a href="https://www.bu.edu/gdp/2022/11/09/need-a-ride-understanding-latent-demand-for-travel-experimental-evidence-from-urban-ethiopia/" target="_blank">BU GDP Center Blog</a></li>
+                    <a href="https://www.theigc.org/publications/gendered-differences-mobility-and-demand-transport-ethiopia" target="_blank">IGC Policy Brief</a> |
+                    <a href="https://www.bu.edu/gdp/2022/11/09/need-a-ride-understanding-latent-demand-for-travel-experimental-evidence-from-urban-ethiopia/" target="_blank">BU GDP Center Blog</a>
                 </ul>
             </div>
             <div class="paper-image-container">
