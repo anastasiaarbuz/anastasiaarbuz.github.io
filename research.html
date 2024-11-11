@@ -52,7 +52,6 @@
             font-weight: 700;
             letter-spacing: 1px;
             position: relative;
-            z-index: 3;
         }
 
         header nav a:hover {
@@ -107,12 +106,19 @@
             font-size: 0.9em;
             color: #000014;
             text-indent: 20px;
+            max-width: calc(100% - 220px); /* Adjusts the width of the abstract to fill up to the image column */
+        }
+
+        .paper-image-container {
+            width: 200px; /* Fixed width for the image column */
+            flex-shrink: 0;
         }
 
         .paper-image {
-            width: 200px;
+            width: 100%;
             height: auto;
             border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .other-writings {
@@ -145,6 +151,16 @@
             .container {
                 width: 95%;
                 padding: 20px;
+            }
+            .paper-container {
+                flex-direction: column;
+            }
+            .paper-image-container {
+                width: 100%;
+                margin-top: 10px;
+            }
+            .abstract-full {
+                max-width: 100%;
             }
         }
     </style>
@@ -187,7 +203,9 @@
                     Abstract: Why do autocrats commit seemingly excessive electoral fraud when victory is virtually guaranteed? This paper examines whether an autocratic government can use fraud to improve its perceived legitimacy, especially when it is damaged by unrest or unpopular policies. Through a survey experiment with a representative sample of Russian voters, I demonstrate that reported election outcomes can influence voters' perceptions: information about high (low) turnout increases (decreases) trust in the government. Next, analyzing data from Russian legislative elections, I identify electoral manipulations via the excess integer values method and hypothesize that legitimacy concerns can explain their spatial distribution. Utilizing a novel dataset on the 2018 anti-pension reform protests, I provide evidence suggesting that protests informed fraud allocation: places with higher protest participation saw an increase in electoral fraud in subsequent legislative elections.
                 </span>
             </div>
-            <img src="files/gd_prop_2021_integer_turnout_reg.png" alt="Image for Fraud and Legitimacy" class="paper-image">
+            <div class="paper-image-container">
+                <img src="files/gd_prop_2021_integer_turnout_reg.png" alt="Image for Fraud and Legitimacy" class="paper-image">
+            </div>
         </div>
 
         <div class="paper-container">
@@ -205,7 +223,9 @@
                     <li><a href="https://www.bu.edu/gdp/2022/11/09/need-a-ride-understanding-latent-demand-for-travel-experimental-evidence-from-urban-ethiopia/" target="_blank">BU GDP Center Blog</a></li>
                 </ul>
             </div>
-            <img src="path/to/your-image2.jpg" alt="Image for Gendered Differences" class="paper-image">
+            <div class="paper-image-container">
+                <img src="path/to/your-image2.jpg" alt="Image for Gendered Differences" class="paper-image">
+            </div>
         </div>
 
         <h2>Work in Progress</h2>
@@ -216,9 +236,9 @@
                 <span class="abstract-preview" id="abstract3-preview" onclick="toggleAbstract('abstract3')">Abstract: This paper investigates whether social connectedness can help opposition overcome the collective action problem... </span>
                 <span class="abstract-full" id="abstract3-full">
                     Abstract: This paper investigates whether social connectedness can help opposition overcome the collective action problem by facilitating spread of a unified voting strategy. I construct a social network graph using public profiles from VKontakte, one of Russia's most popular social media platforms, and calculate measures of social connectedness (density and average path length) at a city level. My findings reveal that higher connectedness amplifies the effect of opposition presence, a proxy for voting strategy utilization, and is associated with a lower incumbent vote share.
-                </span>
+            <div class="paper-image-container">
+                <img src="path/to/your-image3.jpg" alt="Image for Social Networks" class="paper-image">
             </div>
-            <img src="path/to/your-image3.jpg" alt="Image for Social Networks" class="paper-image">
         </div>
 
     </div>
